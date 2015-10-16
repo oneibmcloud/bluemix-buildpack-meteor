@@ -113,7 +113,8 @@ echo "Installing meteor" | indent
 
 # Using different folder to prevent install script form deleting packages file
 VENDORED_METEOR="$(mktmpdir meteor)"
-curl https://install.meteor.com | HOME="$VENDORED_METEOR" /bin/sh | indent
+curl https://raw.githubusercontent.com/oneibmcloud/bluemix-buildpack-meteor/master/support/installmeteor.sh | HOME="$VENDORED_METEOR" /bin/sh | indent
+
 echo "Meteor installed" | indent
 
 echo "Ignoring build of mobile platforms"
